@@ -20,6 +20,6 @@
     },
     "homepage": "https://github.com/szkj-web-he/actions-my#readme",
     "dependencies": {
-        "test-bin-he2": "^0.0.92"
+        "test-bin-he2": "^0.0.93"
     }
 }
