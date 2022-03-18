@@ -1,12 +1,24 @@
-name: GitHub Actions Demo
-on: [push]
+# work flow name
+name: Publish Docker Image
+# when to trage this work flow
+on:
+    push:
+        branches:
+            - 'main'
+# setup default working dir
+defaults:
+    run:
+        shell: bash
+        working-directory: ./
+
+# the jobs to run this ci
 jobs:
-    check-bats-version:
+    build:
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@v2
-            - uses: actions/setup-node@v2
-              with:
-                  node-version: '14'
-            - run: npm install -g bats
-            - run: bats -v
+            # pull all branch and tag data
+            - name: Check out the repo
+              uses: actions/checkout@v2
+            # publish the docker to github package
+            - name: publish to github package
+              uses: zhoubin-datareachable/dc-test@master
