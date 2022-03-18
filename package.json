@@ -1,0 +1,25 @@
+{
+    "name": "actions-my",
+    "version": "1.0.0",
+    "description": "\"# actions-my\"",
+    "main": "index.js",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/szkj-web-he/actions-my.git"
+    },
+    "scripts": {
+        "start": "datareachable dev",
+        "build": "datareachable build",
+        "build-dev": "datareachable build-dev",
+        "lib": "datareachable lib"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/szkj-web-he/actions-my/issues"
+    },
+    "homepage": "https://github.com/szkj-web-he/actions-my#readme",
+    "dependencies": {
+        "test-bin-he2": "^0.0.71"
+    }
+}
