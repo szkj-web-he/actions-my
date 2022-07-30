@@ -9,9 +9,10 @@ on:
 jobs: 
  test: 
   runs-on: ubuntu-latest
-  steps: 
+  steps:
+   - name: aaa 
    env:
     a: ${{secrets.a}}
-   - run: echo '$a'
+   run: echo '$a'
 
 
