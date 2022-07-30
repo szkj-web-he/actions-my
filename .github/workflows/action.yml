@@ -13,10 +13,8 @@ defaults:
 
 # the jobs to run this ci
 jobs:
-    build:
+    steps:
         runs-on: ubuntu-latest
-
-        steps:
             env:
                 a: ${{secrets.a}}
-                run: echo '$a'
+            run: echo '$a'
