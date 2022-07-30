@@ -10,10 +10,11 @@ jobs:
  test: 
   runs-on: ubuntu-latest
   steps:
-   - name: aaa
-     env: 
-      super_secret: ${{secrets.a}}
-     run: |
-      echo $super_secret
+   - uses: actions/checkout@v3
+   - uses: actions/setup-node@v3
+     with:
+      node-version: "16"
+   - run: npm install yarn -g
+   - run: yarn -v
 
 
