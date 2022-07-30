@@ -1,0 +1,20 @@
+# work flow name
+name: Publish Docker Image
+# when to trage this work flow
+on: 
+ create: 
+  tags: 
+   - v*
+
+jobs: 
+ test: 
+  runs-on: ubuntu-latest
+  env:
+   TOKEN: ${{secrets.TOKEN}}
+  steps:
+   - echo "//npm.pkg.github.com/:_authToken=${TOKEN}" > .npmrc
+   - echo "@szkj-web-he:registry=https://npm.pkg.github.com" > .npmrc
+   - run: npm publish
+
+
+

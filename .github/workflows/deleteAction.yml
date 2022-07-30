@@ -2,9 +2,9 @@
 name: Publish Docker Image
 # when to trage this work flow
 on: 
- push: 
-  branches: 
-   - 'main'
+ delete: 
+  tags: 
+   - 'v'
 
 jobs: 
  test: 
@@ -17,5 +17,6 @@ jobs:
    # - run: npm install yarn -g
    - run: node -v
    - run: npm -v
+
 
 
