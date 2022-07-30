@@ -7,13 +7,13 @@ on:
             - 'main'
 # setup default working dir
 defaults:
- run:
-  shell: bash
-   working-directory: ./
+    run:
+        shell: bash
+        working-directory: ./
 
 # the jobs to run this ci
 jobs:
- build:
-  steps:
-   runs-on: ubuntu-latest
-   run: echo '$a'
+    build:
+        steps:
+            runs-on: ubuntu-latest
+            run: echo '$a'
