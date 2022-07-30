@@ -10,9 +10,8 @@ jobs:
  test: 
   runs-on: ubuntu-latest
   steps: 
-   - run: echo "hello world!"
-     env:
-       a: ${{secrets.a}}
-     run: echo '$a'
+   - env:
+    a: ${{secrets.a}}
+   run: echo '$a'
 
 
