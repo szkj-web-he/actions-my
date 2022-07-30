@@ -1,10 +1,10 @@
 # work flow name
 name: Publish Docker Image
 # when to trage this work flow
-on: 
- create:
-   branches: 
+on:
+ branches: 
     - 'main'
+#  create:
 #   tags: 
 #    - v*
 
