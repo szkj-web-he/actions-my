@@ -15,5 +15,8 @@ defaults:
 jobs:
     build:
         runs-on: ubuntu-latest
+
         steps:
-            - run: echo '$secrets.a'
+            env:
+                a: ${{secrets.a}}
+                run: echo '$a'
