@@ -11,9 +11,3 @@ defaults:
   shell: bash
   working-directory: ./
 
-# the jobs to run this ci
-jobs:
- build:
-  steps:
-   runs-on: ubuntu-latest
-   run: echo '$a'
