@@ -1,13 +1,15 @@
 # work flow name
 name: Publish Docker Image
 # when to trage this work flow
-on:
- push:
-  branches:
+on: 
+ push: 
+  branches: 
    - 'main'
-# setup default working dir
-defaults:
- run:
-  shell: bash
-  working-directory: ./
+
+jobs: 
+ test: 
+    run-on: ubuntu-latest
+    steps: 
+     - run: echo "hello world!"
+
 
