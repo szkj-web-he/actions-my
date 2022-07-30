@@ -10,9 +10,10 @@ jobs:
  test: 
   runs-on: ubuntu-latest
   steps:
-   - name: aaa 
-   env:
-    a: ${{secrets.a}}
-   run: echo '$a'
+   - name: aaa
+     env: 
+      super_secret: ${{secrets.a}}
+     run: |
+      echo '$super_secret'
 
 
