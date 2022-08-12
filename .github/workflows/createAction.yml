@@ -2,8 +2,9 @@
 name: Publish Docker Image
 # when to trage this work flow
 on:
- branches: 
-    - 'main'
+ push:
+  branches:  
+   - 'main'
 #  create:
 #   tags: 
 #    - v*
