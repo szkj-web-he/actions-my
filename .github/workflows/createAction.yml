@@ -14,12 +14,13 @@ jobs:
   env:
    TOKEN: ${{secrets.TOKEN}}
   steps:
+   - run: echo ${toJSON(github.event)}
    # - run: echo "\/\/npm.pkg.github.com\/:_authToken=${TOKEN}" > .npmrc
    # - run: echo "@szkj-web-he:registry=https:\/\/npm.pkg.github.com" > .npmrc
    # - run: npm publish
-   - run: ls
-  #  - run: echo ${GITHUB_REF#refs/tags/}
-   - run: echo ${{ toJSON(github.event) }}
+    #  - run: echo ${GITHUB_REF#refs/tags/}
+  #  - run: ls
+   
 
 
 
